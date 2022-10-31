@@ -8,6 +8,9 @@ document.getElementById('inputRefreshTimeNumber').addEventListener
         refreshTimeNumber = document.getElementById('inputRefreshTimeNumber').value;
         lastInterval=childInterval;
         childInterval = setInterval(refreshImages,refreshTimeNumber*1000);
+        if (refreshTimeNumber<1){
+            clearInterval(childInterval);
+        }
         if (closeTimer>0){
             clearInterval(lastInterval);
             closeTimer=0;
