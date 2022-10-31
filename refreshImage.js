@@ -7,6 +7,3 @@ let closeTimer=0;
         document.getElementById('image_id').src = images[index++];
         closeTimer++;
     }
-
-
-

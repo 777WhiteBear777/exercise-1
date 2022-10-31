@@ -13,6 +13,7 @@ document.getElementById('inputRefreshTimeNumber').addEventListener
             closeTimer=0;
         }
     }
+
 )
 // *checking for a number*
 // document.getElementsByClassName('btn')[0].addEventListener(

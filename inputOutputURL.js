@@ -10,4 +10,5 @@ document.getElementsByClassName('btn')[0].addEventListener(
     'click', function getInputText() {
         document.getElementById('boxOutUrlText').innerText = UrlText;
     }
+
 )
