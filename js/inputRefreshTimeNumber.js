@@ -1,26 +1,19 @@
-let refreshTimeNumber;
-let lastInterval;
-let childInterval=null;
-document.getElementById('inputRefreshTimeNumber').addEventListener
+let refreshTimeNumber,
+    lastInterval,
+    childInterval = null;
+
+getElement('inputRefreshTimeNumber').addEventListener
 (
-    'change',
-    function getRefreshTimeNumber() {
-        refreshTimeNumber = document.getElementById('inputRefreshTimeNumber').value;
-        lastInterval=childInterval;
-        childInterval = setInterval(refreshImages,refreshTimeNumber*1000);
-        if (refreshTimeNumber<1){
+    'change', function getRefreshTimeNumber() {
+        refreshTimeNumber = getElement('inputRefreshTimeNumber').value;
+        lastInterval = childInterval;
+        childInterval = setInterval(refreshImages, refreshTimeNumber * 1000);
+        if (refreshTimeNumber < 1) {
             clearInterval(childInterval);
         }
-        if (closeTimer>0){
+        if (closeTimer > 0) {
             clearInterval(lastInterval);
-            closeTimer=0;
+            closeTimer = 0;
         }
     }
-
 )
-// *checking for a number*
-// document.getElementsByClassName('btn')[0].addEventListener(
-//     'click', function getInputText() {
-//         console.log(refreshTimeNumber);
-//     }
-// )

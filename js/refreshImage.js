@@ -1,6 +1,6 @@
 let images = ['img/image_0.png', 'img/image_1.png'],
     index = 0,
-    image = document.getElementById('image_id'),
+    image = getElement('image_id'),
     closeTimer = 0;
 
 image.src = images[0];
